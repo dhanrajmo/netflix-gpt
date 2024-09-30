@@ -9,5 +9,5 @@ export const APIOPTIONS =  {
   };
 export const IMG_CDN_URL = 'https://image.tmdb.org/t/p/w500'
 export const BGIMAGE = 'https://assets.nflxext.com/ffe/siteui/vlv3/85ff76db-39e5-423a-afbc-97d3e74db71b/null/IN-en-20240909-TRIFECTA-perspective_b22117e0-4610-4d57-a695-20f77d241a4a_large.jpg'; 
-export const OPEN_AI_KEY = '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'
+export const OPEN_AI_KEY = 'sk-QwfpA9JDlkJgS9CFeF41WZ6mnmKImfCZKblgNKey8mT3BlbkFJwQTtTXNMaVljVGEMr2llT2-Y2cM0UnHFGR9PHxp40A'
  
