@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux'
 import { addUser } from '../utils/userSlice';
+import { BGIMAGE } from '../utils/constants';
 const Login = () => {
     const dispatch = useDispatch();
     const [isSignIn, setIsSignIn] = useState(true);
@@ -64,13 +65,13 @@ const Login = () => {
         <div>
             <Header />
             <div className='absolute'>
-                <img src='https://assets.nflxext.com/ffe/siteui/vlv3/85ff76db-39e5-423a-afbc-97d3e74db71b/null/IN-en-20240909-TRIFECTA-perspective_b22117e0-4610-4d57-a695-20f77d241a4a_large.jpg'
+                <img className='md:w-screen h-screen object-cover' src= {BGIMAGE}
                     alt='BG' />
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className='w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80'>
+            <form onSubmit={(e) => e.preventDefault()} className='w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80'>
                 <h1 className='font-bold text-3xl py-4'> {isSignIn ? 'Sign In' : 'Sign Up'}</h1>
                 {isSignIn ? [] : <input ref={fullName} type='text' placeholder='Full Name' className='p-4 my-4 w-full bg-gray-700 rounded-lg' />}
-                <input ref={email} type='text' placeholder='Email or Phone Number' className='p-4 my-4 w-full bg-gray-700 rounded-lg'></input>
+                <input ref={email} type='text' placeholder='Email' className='p-4 my-4 w-full bg-gray-700 rounded-lg'></input>
                 <input ref={password} type='password' placeholder='Password' className='p-4 my-4 w-full bg-gray-700 rounded-lg'></input>
                 {/* {isSignIn ? [] : <input type = 'number' placeholder='Mobile Number' className='p-4 my-4 w-full bg-gray-700 rounded-lg'/>} */}
                 <button className='p-4 my-6 bg-red-700 w-full rounded-lg' onClick={handleButtonClick}>{isSignIn ? 'Sign In' : 'Sign Up'}</button>
