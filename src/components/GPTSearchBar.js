@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { client } from '../utils/openAI'
+import { openai } from '../utils/openai'
 import { APIClient } from 'openai/core.mjs';
 import { APIOPTIONS } from '../utils/constants';
 import { useDispatch } from 'react-redux';
@@ -14,7 +14,7 @@ const GPTSearchBar = () => {
     }
     const handleGptSearchClick = async () => {
         const gptQuery = 'Act as a movie recommendation system and suggest some movies for the query : ' + searchtext.current.value + '.only give me name of 5 movies, comma seperated like example reult given ahead. Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya';
-        const chatCompletion = await client.chat.completions.create({
+        const chatCompletion = await openai.chat.completions.create({
             messages: [{ role: 'user', content: gptQuery }],
             model: 'gpt-3.5-turbo',
         });
