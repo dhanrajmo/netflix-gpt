@@ -76,7 +76,7 @@ const Login = () => {
                 {/* {isSignIn ? [] : <input type = 'number' placeholder='Mobile Number' className='p-4 my-4 w-full bg-gray-700 rounded-lg'/>} */}
                 <button className='p-4 my-6 bg-red-700 w-full rounded-lg' onClick={handleButtonClick}>{isSignIn ? 'Sign In' : 'Sign Up'}</button>
                 <h3 className='text-red-500 font-bold text-lg'>{errorMessage}</h3>
-                <p className='py-4' onClick={toggleSignInForm}>{isSignIn ? 'New to Netflix? Sign Up Now' : 'Already Member? Sign In'}</p>
+                <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>{isSignIn ? 'New to Netflix? Sign Up Now' : 'Already Member? Sign In'}</p>
             </form>
         </div>
     )

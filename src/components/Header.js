@@ -58,7 +58,7 @@ const Header = () => {
       {user ?
         <div className='flex p-2 justify-between'>
           <button className='py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg ' onClick={handleGPTSeacrchClick}>{showGptSearch ? 'Home' : 'Show GPT'}</button>
-          <h3 className='text-red-500 font-bold text-lg mx-6'>Welcome {displayName}</h3>
+          <h3 className='text-red-500 font-bold text-lg mx-6 mt-3'>Welcome {displayName}</h3>
           <img className='hidden md:block w-12 h-12' src={AVATAR} alt='icon' />
           <button onClick={handleSignOut} className='font-bold text-white px-4'>{'Sign Out'}</button>
         </div>
