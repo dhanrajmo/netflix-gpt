@@ -51,16 +51,16 @@ const Header = () => {
     dispatch(toggleGptSearchView())
   }
   return (
-    <div className='absolute w-screen px-6 md:px-8 py-12 md:py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between '>
-      <img className='w-44 mx-auto md:mx-0'
+    <div className='absolute w-full px-4 md:px-8 py-3 md:py-2 bg-gradient-to-b from-black z-10 flex flex-wrap items-center justify-between gap-3'>
+      <img className='w-32 md:w-44'
         alt='Header Logo'
         src={LOGO} />
       {user ?
-        <div className='flex p-2 justify-between'>
-          <button className='py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg ' onClick={handleGPTSeacrchClick}>{showGptSearch ? 'Home' : 'Show GPT'}</button>
-          <h3 className='text-red-500 font-bold text-lg mx-6 mt-3'>Welcome {displayName}</h3>
+        <div className='flex flex-wrap items-center justify-end gap-2 md:gap-4 min-w-0'>
+          <button className='py-2 px-3 md:px-4 bg-purple-800 text-white text-sm md:text-base rounded-lg' onClick={handleGPTSeacrchClick}>{showGptSearch ? 'Home' : 'Show GPT'}</button>
+          <h3 className='text-red-500 font-bold text-sm md:text-lg truncate max-w-32 md:max-w-none'>Welcome {displayName}</h3>
           <img className='hidden md:block w-12 h-12' src={AVATAR} alt='icon' />
-          <button onClick={handleSignOut} className='font-bold text-white px-4'>{'Sign Out'}</button>
+          <button onClick={handleSignOut} className='font-bold text-white text-sm md:text-base px-2 md:px-4'>{'Sign Out'}</button>
         </div>
         :
         []}

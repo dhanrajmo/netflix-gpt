@@ -16,7 +16,7 @@ const Browse = () => {
   useAddTrendingMovies()
   useAddUpcommingMovies()
   return (
-    <div className=' overflow-y-scroll overflow-x-hidden scrollbar-hide bg-gradient-to-b from-black'>
+    <div className='h-screen overflow-y-auto overflow-x-hidden scrollbar-hide bg-black'>
       <Header />
       {showGptSearch ? (<GPTSearch />) : (
         <>

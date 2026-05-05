@@ -23,10 +23,10 @@ const GPTSearchBar = () => {
         dispatch(addGptmovieResult({movieList : gptMovieList,movieResults : ogResults}))
     }
     return (
-        <div className='pt-[55%] md:pt-[10%] flex justify-center'>
-            <form className='bg-black w-full md:w-1/2 grid grid-cols-12' onSubmit={(e) => e.preventDefault()}>
-                <input ref={searchtext} placeholder='what would you like to watch today' type='text' className='p-4 m-4 col-span-9'></input>
-                <button className='py-2 px-4 m-4 bg-red-700 text-white rounded-lg col-span-3' onClick={handleGptSearchClick}>Search</button>
+        <div className='pt-32 md:pt-[10%] px-4 flex justify-center'>
+            <form className='bg-black w-full max-w-3xl grid grid-cols-12 gap-3 p-3 md:p-4' onSubmit={(e) => e.preventDefault()}>
+                <input ref={searchtext} placeholder='what would you like to watch today' type='text' className='p-3 md:p-4 col-span-12 sm:col-span-9 min-w-0'></input>
+                <button className='py-3 px-4 bg-red-700 text-white rounded-lg col-span-12 sm:col-span-3' onClick={handleGptSearchClick}>Search</button>
             </form>
         </div>
     )

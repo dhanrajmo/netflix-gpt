@@ -62,21 +62,21 @@ const Login = () => {
         }
     }
     return (
-        <div>
+        <div className='relative min-h-screen overflow-x-hidden bg-black'>
             <Header />
-            <div className='absolute'>
-                <img className='md:w-screen h-screen object-cover' src= {BGIMAGE}
+            <div className='fixed inset-0'>
+                <img className='w-full h-full object-cover' src= {BGIMAGE}
                     alt='BG' />
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className='w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80'>
-                <h1 className='font-bold text-3xl py-4'> {isSignIn ? 'Sign In' : 'Sign Up'}</h1>
-                {isSignIn ? [] : <input ref={fullName} type='text' placeholder='Full Name' className='p-4 my-4 w-full bg-gray-700 rounded-lg' />}
-                <input ref={email} type='text' placeholder='Email' className='p-4 my-4 w-full bg-gray-700 rounded-lg'></input>
-                <input ref={password} type='password' placeholder='Password' className='p-4 my-4 w-full bg-gray-700 rounded-lg'></input>
+            <form onSubmit={(e) => e.preventDefault()} className='relative z-10 w-[calc(100%-2rem)] max-w-md md:max-w-lg p-6 sm:p-8 md:p-12 bg-black mt-28 md:mt-36 mx-auto text-white bg-opacity-80'>
+                <h1 className='font-bold text-2xl md:text-3xl py-3 md:py-4'> {isSignIn ? 'Sign In' : 'Sign Up'}</h1>
+                {isSignIn ? [] : <input ref={fullName} type='text' placeholder='Full Name' className='p-3 md:p-4 my-3 md:my-4 w-full bg-gray-700 rounded-lg' />}
+                <input ref={email} type='text' placeholder='Email' className='p-3 md:p-4 my-3 md:my-4 w-full bg-gray-700 rounded-lg'></input>
+                <input ref={password} type='password' placeholder='Password' className='p-3 md:p-4 my-3 md:my-4 w-full bg-gray-700 rounded-lg'></input>
                 {/* {isSignIn ? [] : <input type = 'number' placeholder='Mobile Number' className='p-4 my-4 w-full bg-gray-700 rounded-lg'/>} */}
-                <button className='p-4 my-6 bg-red-700 w-full rounded-lg' onClick={handleButtonClick}>{isSignIn ? 'Sign In' : 'Sign Up'}</button>
-                <h3 className='text-red-500 font-bold text-lg'>{errorMessage}</h3>
-                <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>{isSignIn ? 'New to Netflix? Sign Up Now' : 'Already Member? Sign In'}</p>
+                <button className='p-3 md:p-4 my-5 md:my-6 bg-red-700 w-full rounded-lg' onClick={handleButtonClick}>{isSignIn ? 'Sign In' : 'Sign Up'}</button>
+                <h3 className='text-red-500 font-bold text-sm md:text-lg break-words'>{errorMessage}</h3>
+                <p className='py-4 cursor-pointer text-sm md:text-base' onClick={toggleSignInForm}>{isSignIn ? 'New to Netflix? Sign Up Now' : 'Already Member? Sign In'}</p>
             </form>
         </div>
     )
